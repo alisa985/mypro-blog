@@ -3,7 +3,7 @@
 
 <head>
     <%- include('head',{}); %>
-        <title>Document</title>
+        <title>注册</title>
         <style>
             body {
                 background-image: url('images/gufeng.jpg');
@@ -15,10 +15,13 @@
 
 <body>
     <div class="">
-        <div class="layui-container layui-card" style="text-align: center;margin: 250px 400px;">
-            <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
-                <div class="layui-row">
-                    <form class="layui-form" action="/users/addUser" method="post">
+        <div class="layui-container layui-card " style="text-align: center;margin: 250px 400px;">
+            <div class="layui-col-xs6 layui-col-sm6 layui-col-md4 ">
+                <div class="layui-row ">
+                    <div class="login" style="font-size: 20px;color: white;width: 450px;height: 80px;">
+                        <h1>注册</h1>
+                    </div>
+                    <form class="layui-form" action="/users/addUser" method="POST">
                         <div class="layui-form-item">
                             <label class="layui-form-label">用户名</label>
                             <div class="layui-input-block">
@@ -28,7 +31,7 @@
                         <div class="layui-form-item">
                             <label class="layui-form-label">密码</label>
                             <div class="layui-input-block">
-                                <input type="password" name="password" placeholder="请输入密码" required class="layui-input">
+                                <input type="password" name="password" required placeholder="请输入密码" required class="layui-input">
                             </div>
                         </div>
                         <div class="layui-form-item">
@@ -40,8 +43,9 @@
                         </div>
                         <div class="layui-form-item">
                             <div class="layui-input-block">
-                                <button class="layui-btn layui-bg-cyan">注册</button>
-                                <li>已有账号，<a href="login.ejs">立即登录</a></li>
+                                <button type="submit" class="layui-btn layui-bg-cyan">注册</button>
+                                <button type="reset" class="layui-btn layui-bg-cyan">重置</button>
+                                <li>已有账号，<a href="login">立即登录</a></li>
                             </div>
                         </div>
                     </form>
