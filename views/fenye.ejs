@@ -1,27 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <%- include('head',{}); %>
+  <%- include('head',{}); %>
     <title>Document</title>
 </head>
+
 <body>
-    <div>
-        <ul class="layui-nav layui-bg-blue">
-            <li class="layui-nav-item">
-              <a href="">控制台<span class="layui-badge">9</span></a>
-            </li>
-            <li class="layui-nav-item">
-              <a href="">个人中心<span class="layui-badge-dot"></span></a>
-            </li>
-            <li class="layui-nav-item">
-              <a href=""><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
-              <dl class="layui-nav-child">
-                <dd><a href="javascript:;">修改信息</a></dd>
-                <dd><a href="javascript:;">安全管理</a></dd>
-                <dd><a href="javascript:;">退了</a></dd>
-              </dl>
-            </li>
-          </ul>
-    </div>
+  <div style="margin: -50px 0px;">
+    <ul class="layui-nav ">
+      <i class="layui-icon layui-icon-face-smile-b"
+        style="font-size: 30px; color: white;display: inline;vertical-align:middle"></i>
+      <li class="layui-nav-item layui-this"><a href="fenye.ejs">首页</a></li>
+      <li class="layui-nav-item "><a href="xiangqing.ejs">写文章</a></li>
+      <li class="layui-nav-item"><a href="write.ejs">内容</a></li>
+      <li class="layui-nav-item" style="float: right;">
+        <a href="javascript:;"><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
+      </li>
+      <li class="layui-nav-item" style="float: right;">
+        <a href="javascript:;">退出</a>
+      </li>
+    </ul>
+  </div>
+  <div style=" text-align: center;margin: 80px 80px;">
+    <table class="layui-table" lay-skin="line">
+      <colgroup>
+        <col width="150">
+        <col width="200">
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>昵称</th>
+          <th>加入时间</th>
+          <th>签名</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>贤心</td>
+          <td>2016-11-29</td>
+          <td>人生就像是一场修行</td>
+          <td>
+            <a href="#">
+              <i class="layui-icon layui-icon-edit"></i>
+              修改
+            </a>
+            <a href="#">
+              <i class="layui-icon layui-icon-delete"></i>
+              删除
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>许闲心</td>
+          <td>2016-11-28</td>
+          <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
+          <td>
+            <a href="#">
+              <i class="layui-icon layui-icon-edit"></i>
+              修改
+            </a>
+            <a href="#">
+              <i class="layui-icon layui-icon-delete"></i>
+              删除
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>sentsin</td>
+          <td>2016-11-27</td>
+          <td> Life is either a daring adventure or nothing.</td>
+          <td>
+            <a href="#">
+              <i class="layui-icon layui-icon-edit"></i>
+              修改
+            </a>
+            <a href="#">
+              <i class="layui-icon layui-icon-delete"></i>
+              删除
+            </a>
+          </td>
+        </tr>
+        </tr>
+      </tbody>
+    </table>
+    <div style="float: right;">
+    <span class="layui-badge layui-bg-cyan">1</span>
+    <span class="layui-badge layui-bg-cyan">2</span>
+    <span class="layui-badge layui-bg-cyan">3</span>
+    <span class="layui-badge layui-bg-cyan">4</span>
+    <span class="layui-badge layui-bg-cyan">5</span>
+    <span class="layui-badge layui-bg-cyan">6</span>
+  </div></div>
 </body>
+
 </html>

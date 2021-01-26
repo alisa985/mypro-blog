@@ -8,39 +8,44 @@
     <link rel="stylesheet" href="/stylesheets/style.css"> -->
 
     <%- include('head',{}); %>
-    <title>Document</title>
-    <style type="text/css">
-
-    </style>
+        <title>Document</title>
+        <style>
+            body {
+                background-image: url('images/gufeng.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+            }
+        </style>
 </head>
 
 <body>
-    <div class="layui-container"  >
+    <div class="layui-container" style="text-align: center;margin: 250px 400px;">
         <div class="layui-col-xs6 layui-col-sm6 layui-col-md4">
-        <div class="layui-row">
-            <form class="layui-form" action="">
-                <div class="layui-form-item">
-                    <label class="layui-form-label">用户名</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="title" required placeholder="请输入用户名"
-                            class="layui-input">
+            <div class="layui-row">
+                <form class="layui-form" action="">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">用户名</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" required placeholder="请输入用户名" class="layui-input">
+                        </div>
                     </div>
-                </div>
-                <div class="layui-form-item">
-                    <label class="layui-form-label">密码</label>
-                    <div class="layui-input-block">
-                        <input type="password" name="title" required class="layui-input">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">密码</label>
+                        <div class="layui-input-block">
+                            <input type="password" name="title" required class="layui-input">
+                        </div>
                     </div>
-                </div>
-                <div class="layui-form-item">
-                    <div class="layui-input-block">
-                      <button class="layui-btn layui-btn-normal">登录</button>
-                      <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn layui-btn-normal">登录</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            <li>没有账号，<a href="zhuce.ejs">立即注册</a></li>
+                        </div>
                     </div>
-                  </div>
-            </form>
+                </form>
+            </div>
         </div>
-    </div></div>
+    </div>
 </body>
 
 </html>
