@@ -5,18 +5,17 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="margin: -50px 0px;">
+    <div class="layui-row">
         <ul class="layui-nav layui-bg-cyan">
           <i class="layui-icon layui-icon-face-smile-b"
             style="font-size: 30px; color: white;display: inline;vertical-align:middle"></i>
-          <li class="layui-nav-item layui-this"><a href="fenye">首页</a></li>
-          <li class="layui-nav-item "><a href="write">写文章</a></li>
-          <li class="layui-nav-item"><a href="xiangqing">内容</a></li>
+          <li class="layui-nav-item layui-this"><a href="/fenye">首页</a></li>
+          <li class="layui-nav-item "><a href="/write">写文章</a></li>
           <li class="layui-nav-item" style="float: right;">
             <% if(userName) { %>
                 <p><%= userName  %></p>
                 <% }else { %>
-            <a href="login"><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
+            <a href="/login"><img src="//t.cn/RCzsdCq" class="layui-nav-img">我</a>
             <%}%>
           </li>
           <li class="layui-nav-item" style="float: right;">

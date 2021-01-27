@@ -4,88 +4,78 @@
 <head>
   <%- include('head',{}); %>
     <title>Document</title>
+    <style>
+        ul li {
+          display: inline-block;
+        }
+        .content{
+          border: 1px solid gray;
+          border-radius: 15px;
+          padding: 15px;
+          margin: 20px auto;
+        }
+    </style>
 </head>
 
 <body>
   <%- include('daohang',{}); %>
-    <div style=" text-align: center;margin: 80px 80px;">
-      <table class="layui-table" lay-skin="line">
-        <colgroup>
-          <col width="150">
-          <col width="200">
-          <col width="650">
-          <col>
-        </colgroup>
-        <thead>
-          <tr style="height: 50px;">
-            <th>昵称</th>
-            <th>加入时间</th>
-            <th>签名</th>
-            <th>操作</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>
-              <a href="/xiangqing">贤心</a>
-            </td>
-            <td>
-              <a href="/xiangqing">2016-11-29</a>
-            </td>
-            <td>
-              <a href="/xiangqing">人生就像是一场修行</a>
-            </td>
-            <td>
-              <a href="#">
-                <i class="layui-icon layui-icon-edit"></i>
-                修改
-              </a>
-              <a href="#">
-                <i class="layui-icon layui-icon-delete"></i>
-                删除
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>许闲心</td>
-            <td>2016-11-28</td>
-            <td>于千万人之中遇见你所遇见的人，于千万年之中，时间的无涯的荒野里…</td>
-            <td>
-              <a href="#">
-                <i class="layui-icon layui-icon-edit"></i>
-                修改
-              </a>
-              <a href="#">
-                <i class="layui-icon layui-icon-delete"></i>
-                删除
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>sentsin</td>
-            <td>2016-11-27</td>
-            <td> Life is either a daring adventure or nothing.</td>
-            <td>
-              <a href="#">
-                <i class="layui-icon layui-icon-edit"></i>
-                修改
-              </a>
-              <a href="#">
-                <i class="layui-icon layui-icon-delete"></i>
-                删除
-              </a>
-            </td>
-          </tr>
-          </tr>
-        </tbody>
-      </table>
-      <div style="float: right;">
-        <span class="layui-badge layui-bg-cyan"><a href="/fenye">1</a></span>
+    <div class="layui-container">
+      <div class="layui-col-xs12">
+        <% data.blogList.map(item=>{ %>
+        <div class="content">
+            <ul>
+              <li>
+                <a href="/xiangqing?_id=<%= item._id %>">
+                  <div>
+                    <h1><%= item.title %></h1>
+                  </div>
+                </a>
+                <a href="/xiangqing?_id=<%= item._id %>">
+                  <div>
+                    <%= item.time %>
+                  </div>
+                </a>
+                <a href="/xiangqing?_id=<%= item._id %>">
+                  <div>
+                    <%= item.author %>
+                  </div>
+                </a>
+                <div class="set">
+                  <a href="/write?_id=<%= item._id%>&page=<%= data.currPage %>">
+                    <i class="layui-icon layui-icon-edit"></i>
+                    修改
+                  </a>
+                  <a href="#">
+                    <i class="layui-icon layui-icon-delete"></i>
+                    删除
+                  </a>
+                </div>
+              </li>
+              <li>
+                <a href="/xiangqing?_id=<%= item._id %>">
+                  <%- item.content %>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <% }) %>
+      </div>
+      
+     
+      <div class="page w1100" style="float: right;">
+          <!-- <span class="layui-badge layui-bg-cyan"><a href="/fenye">1</a></span>
         <span class="layui-badge layui-bg-cyan"><a href="/fenye">2</a></span>
         <span class="layui-badge layui-bg-cyan">3</span>
         <span class="layui-badge layui-bg-cyan">4</span>
         <span class="layui-badge layui-bg-cyan">5</span>
-        <span class="layui-badge layui-bg-cyan">6</span>
+        <span class="layui-badge layui-bg-cyan">6</span> -->
+          <% for(let i=1;i <=data.PagesTotle;i++){ %>
+
+            <a href="/fenye?page=<%=i%>">
+              <%= i %>
+            </a>
+
+            <%}%>
       </div>
     </div>
 </body>

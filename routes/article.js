@@ -10,13 +10,12 @@ let fs = require('fs')
 
 
 router.post('/add', (req, res, next) => {
-  console.log(req.body);
   //向数据库添加文章信息
-  let articleInfo = {
+  var articleInfo = {
     title: req.body.title,
-    date: req.body.date,
+    date: Date.now(),
+    author:req.body.author,
     content: req.body.content,
-    img: req.body.img,
   }
 
   //文章数据 放入模型
@@ -25,6 +24,7 @@ router.post('/add', (req, res, next) => {
   articleI.save((err, result) => {
     if (!err) {
       res.send(result)
+      // res.redirect('/write')  
     }
   })
   console.log(req.body);

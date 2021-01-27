@@ -12,25 +12,13 @@
     <div class="layui-card layui-bg-cyan" style=" text-align: center;margin: 120px 80px;">
       <div class="layui-colla-content layui-show" style="text-align: left;color: white; ">
         <div class="layui-card-header" style="color: white;">
-          <h1>重生之郑爽是我老婆</h1>
+          <h1><%= data.title %></h1>
         </div>
         <div class="layui-card-body" >
-          <span>作者：贤心</span>
-          <span>发布时间:2016-11-29 11:42:59</span>
+          <span>作者：<%= data.author%></span>
+          <span>发布时间:<%= data.time%></span>
           <div class="word">
-              <p>
-                  人生浮华若梦，每分每秒都无比珍贵！你不知道你的下一秒会发生什么
-                  ，亦无法改变已经发生的一切。在浩瀚的时间长河之中，人类是如此的
-                  渺小且脆弱。一次地震、一次洪水、一次火灾、一次台风······
-              </p>
-              <p>
-                  每一次灾难的来临都会轻而易举的夺取我们的生命，对于那些救助我们
-                  于苦难之中的英雄来说，他们是那样的无所畏惧，奋不顾身。明明与我
-                  们毫无关系，但看到他们的时候就好像看到家人一样
-              </p>
-              <div class="chatu">
-                  <img src="images/ke.jpg" style="width: 300;height: 300px;">
-              </div>
+            <%- data.content%>
           </div>
 </body>
 

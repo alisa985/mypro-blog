@@ -4,9 +4,9 @@ let Schema = mongoose.Schema
 
 let articleSchema = new Schema({
     title:String,
-    date:String,
+    date:Number,
+    author:String,
     content:String,
-    img:String,
 })
 
 //Model------将会生成数据库集合名(复数)
